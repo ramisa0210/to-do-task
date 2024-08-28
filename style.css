@@ -1,0 +1,193 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #7474b3;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.container {
+    background-color: #fff;
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .container {
+    background-color: #444;
+    color: #fff;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+body.dark-mode h1 {
+    color: #fff;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.controls button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#dark-mode-toggle {
+    background-color: #5c6bc0;
+    color: #fff;
+}
+
+#clear-tasks-btn {
+    background-color: #f14242;
+    color: #ffffff;
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #dddddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#add-task-btn {
+    padding: 10px 15px;
+    background-color: #5c6bc0;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#add-task-btn:hover {
+    background-color: #3949ab;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fdfdff;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+
+.dark-mode li {
+    background-color: #f8f5f5;
+    color: #020202; /* Ensure text is visible in dark mode */
+}
+
+
+
+
+li.completed {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.task-info {
+    flex-grow: 1;
+}
+
+.delete-btn, .edit-btn {
+    background-color: #e91919;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.edit-btn {
+    background-color: #faa320;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+.edit-btn:hover {
+    background-color: #f57c00;
+}
+
+.task-date {
+    font-size: 12px;
+    color: #797777;
+}
+
+.task-counter {
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+}
+
+
+/* Success message styles */
+.success-message {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it appears above other elements */
+    font-size: 14px;
+    transition: opacity 0.5s ease; /* Smooth transition for fading out */
+}
+
+.success-message.show {
+    display: block;
+    opacity: 1;
+}
+
+/* Error message styles */
+
